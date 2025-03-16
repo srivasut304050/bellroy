@@ -1,4 +1,5 @@
-import { Box, Container, Grid, Typography, Card, CardContent, CardMedia, Chip } from '@mui/material';
+import { Box, Container, Grid, Typography, Card, CardContent, Chip } from '@mui/material';
+import Image from 'next/image';
 import MainLayout from '@/components/layout/MainLayout';
 
 const wallets = [
@@ -6,7 +7,7 @@ const wallets = [
     id: 1,
     name: 'Note Sleeve',
     price: '$89',
-    image: 'https://images.unsplash.com/photo-1556089969-beb4fd8a3891?w=800&auto=format&fit=crop&q=60',
+    image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&auto=format&fit=crop&q=60',
     category: 'Bifold',
     description: 'Slim profile with room for bills, cards and coins',
     features: ['Full-grain leather', 'RFID protection', 'Quick access card slots']
@@ -15,7 +16,7 @@ const wallets = [
     id: 2,
     name: 'Apex Slim Sleeve',
     price: '$129',
-    image: 'https://images.unsplash.com/photo-1556089969-beb4fd8a3891?w=800&auto=format&fit=crop&q=60',
+    image: 'https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=800&auto=format&fit=crop&q=60',
     category: 'Card Holder',
     description: 'Ultra-slim design for the minimalist',
     features: ['Premium leather', 'Pull-tab card access', 'Holds up to 8 cards']
@@ -24,7 +25,7 @@ const wallets = [
     id: 3,
     name: 'Hide & Seek',
     price: '$99',
-    image: 'https://images.unsplash.com/photo-1556089969-beb4fd8a3891?w=800&auto=format&fit=crop&q=60',
+    image: 'https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=800&auto=format&fit=crop&q=60',
     category: 'Bifold',
     description: 'Classic wallet with hidden bill section and RFID protection',
     features: ['Hidden compartment', 'RFID protection', 'Coin pocket']
@@ -33,7 +34,7 @@ const wallets = [
     id: 4,
     name: 'Travel Wallet',
     price: '$149',
-    image: 'https://images.unsplash.com/photo-1556089969-beb4fd8a3891?w=800&auto=format&fit=crop&q=60',
+    image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&auto=format&fit=crop&q=60',
     category: 'Travel',
     description: 'Keep your passport, cards and travel documents organized',
     features: ['Passport pocket', 'Micro pen included', 'RFID protection']
@@ -64,13 +65,15 @@ export default function WalletsPage() {
                     }
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="300"
-                    image={wallet.image}
-                    alt={wallet.name}
-                    sx={{ objectFit: 'cover' }}
-                  />
+                  <Box sx={{ position: 'relative', width: '100%', height: 300 }}>
+                    <Image
+                      src={wallet.image}
+                      alt={wallet.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </Box>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {wallet.name}
