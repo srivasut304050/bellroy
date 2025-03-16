@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Box, Container, Typography, Grid, Button, Card, CardContent, CardMedia, IconButton } from '@mui/material';
 import { ArrowForward, LocalShipping, Security, Star } from '@mui/icons-material';
 import MainLayout from '@/components/layout/MainLayout';
@@ -106,7 +104,7 @@ export default function Home() {
                 opacity: 0.9
               }}
             >
-              We've built products for a better way to carry
+              We&apos;ve built products for a better way to carry
             </Typography>
             <Box sx={{ display: 'flex', gap: 2 }}>
               <Button
@@ -459,7 +457,7 @@ export default function Home() {
                   Certified B Corp
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.6 }}>
-                  We're recognized for using business as a force for good. Which includes our development of recycled materials.
+                  We&apos;re recognized for using business as a force for good. Which includes our development of recycled materials.
                 </Typography>
                 <Link href="/materials" passHref>
                   <Button
@@ -503,7 +501,7 @@ export default function Home() {
                   Making products that last
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.6 }}>
-                  We're committed to making products that can be used and loved for as long as possible. Read about our product guarantees.
+                  We&apos;re committed to making products that can be used and loved for as long as possible. Read about our product guarantees.
                 </Typography>
                 <Link href="/warranty" passHref>
                   <Button

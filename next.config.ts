@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
     domains: ['images.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
   },
-  reactStrictMode: true,
-  swcMinify: true
+  reactStrictMode: true
 };
 
 export default nextConfig;
